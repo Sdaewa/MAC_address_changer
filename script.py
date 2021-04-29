@@ -2,7 +2,6 @@
 import subprocess
 
 interface = input('interface > ')
-# change < 00: 11: 33: 44: 55: 66 > for new address
 new_mac = input('new MAC address > ')
 
 
