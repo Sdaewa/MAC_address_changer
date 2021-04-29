@@ -2,11 +2,17 @@
 import subprocess
 import optparse
 
-# options
+
 parser = optparse.OptionParser()
-parser.add_option('-i', '--interface',
-                  dest='interface',
-                  help='Interface to chance MAC address')
+
+# options
+parser.add_option('-i', '--interface', dest='interface',
+                  help='Interface to change MAC address')
+
+parser.add_option('-m', '--interface', dest='interface',
+                  help='Interface to change MAC address')
+
+
 parser.parse_args()
 
 
