@@ -2,4 +2,4 @@
 
 import subprocess
 
-subprocess.call(args)
+subprocess.call("ifconfig", shell=True)
