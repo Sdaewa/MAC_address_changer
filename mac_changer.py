@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import subprocess
 import optparse
+import re
 
 
 # options
@@ -25,4 +26,9 @@ def change_mac(interface, new_mac):
 
 
 options = get_arguments()
-change_mac(options.interface, options.new_mac)
+# change_mac(options.interface, options.new_mac)
+ifconfig_result = subprocess.check_output(['ifconfig', options.interface])
+print(ifconfig_result)
+
+mac_address_search_result = re.search(r"\w\w:\w\w:\w\w:\w\w:\w\w:\w\w", ifconfig_result)
+print(mac_address_search_result.group(0))
